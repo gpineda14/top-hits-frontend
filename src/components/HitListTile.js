@@ -17,7 +17,7 @@ class HitListTile extends React.Component {
   render() {
     return(
       <div onClick={this.handleOpen}>
-        <img src={this.props.data.img} alt={this.props.data.alt} />
+        <img src={this.props.data.img} alt={this.props.data.title} />
         <HitModal open={this.state.open} close={this.handleClose}/>
       </div>
     )
