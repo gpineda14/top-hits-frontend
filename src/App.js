@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar';
-import HitsList from './components/HitsList';
+import Album from './components/Album'
 
 class App extends Component {
+  state = {
+    tracks: [],
+    isLoading: true,
+    errors: null
+  };
+
+  componentDidMount() {
+    this.getTracks();
+  }
+
+  getTracks = () => {
+  }
   render() {
     return (
       <div>
-        <NavBar />
-        <HitsList />
+        <Album data={this.state.data}/>
       </div>
     )
   }
